@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style>
+        #main{
+            width: 30vw;
+            height: 40vh;
+            background-color: aqua;
+        }
+        .num{
+            font-weight: bold;
+            color: rgb(77, 5, 5);
+            font-style: italic;
+            margin:5px;
+        }
+        .box{
+            background-color: rgb(0, 0, 0,0.5);
+            color:white;
+            font-size: medium;
+            font-style: oblique;
+            border-radius: 6px;
+            margin: 10px;
+            box-shadow: 2px;
+          
+
+        }
+        .box::placeholder{
+            color: aliceblue;
+            font-size: smaller;
+        }
+        #belowMain{
+            display:flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .bo{
+            border-radius: 10px;
+            background-color: black;
+            color: azure;
+            
+        }
+        #res{
+            margin-top: 15px;
+            background-color:rgb(0, 0, 0,0.1);
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+           border:1px solid grey;
+           border-radius: 15px;
+            text-decoration: wavy;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="belowMain">
+                <div class="two" id="f">
+                    <div class="num">1<sup>st</sup> Num</div>
+                    <input type="number" class="box" placeholder="Enter please...">
+                   </div>
+                   <div class="two" id="s">
+                       <div class="num">2<sup>nd</sup> Num</div>
+                    <input type="number" class="box" placeholder="Enter please...">
+                   </div>
+            
+           
+            <div class="muldiv">
+                <button class="bo">Multiply</button>
+                <button class="bo">Division</button>
+            </div>
+            <div id="res"></div>
+        </div>
+        </div>
+
+    </body>
+</html>
+
+<script>
+
+var r=document.getElementsByClassName('bo');
+
+r[0].addEventListener('click',function samir(){
+    var c=document.getElementsByClassName('box');
+    var a=c[0].value;
+var b=c[1].value;
+document.getElementById('res').textContent=("The result is "+a*b);
+});
+r[1].addEventListener('click',function samr(){
+    var c=document.getElementsByClassName('box');
+var a=c[0].value;
+var b=c[1].value;
+document.getElementById('res').textContent=("The result is "+a/b);
+
+});
+</script>
